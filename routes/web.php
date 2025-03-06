@@ -1,6 +1,8 @@
 <?php
 
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\MasterBarangController;
+use App\Http\Controllers\PencatatanController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
@@ -31,6 +33,11 @@ Route::middleware('auth')->group(function () {
 
     Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
     Route::get('/admin', [DashboardController::class, 'admin'])->middleware('role:admin');
+
+    Route::get('/master-barang', [MasterBarangController::class, 'index'])->name('master-barang');
+    Route::get('/master-barang', [MasterBarangController::class, 'store'])->name('master-barang');
+
+    Route::get('/pencatatan', [PencatatanController::class, 'index'])->name('pencatatan');
 });
 
 require __DIR__.'/auth.php';

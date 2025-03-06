@@ -15,6 +15,14 @@
                    <x-nav-link :href="url()->current()" :active="request()->routeIs('dashboard')">
                     {{ __('Dashboard') }}
                     </x-nav-link>
+                    @auth
+                        <x-nav-link :href="route('master-barang')" :active="request()->routeIs('master-barang')">
+                            {{ __('Master Barang') }}
+                        </x-nav-link>
+                        <x-nav-link :href="route('pencatatan')" :active="request()->routeIs('pencatatan')">
+                            {{ __('Pencatatan') }}
+                        </x-nav-link>
+                    @endauth
                 </div>
             </div>
 
@@ -71,6 +79,14 @@
             <x-responsive-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
                 {{ __('Dashboard') }}
             </x-responsive-nav-link>
+            @auth
+                <x-responsive-nav-link :href="route('master-barang')" :active="request()->routeIs('master-barang')">
+                    {{ __('Master Barang') }}
+                </x-responsive-nav-link>
+                <x-responsive-nav-link :href="route('pencatatan')" :active="request()->routeIs('pencatatan')">
+                    {{ __('Pencatatan') }}
+                </x-responsive-nav-link>
+            @endauth
         </div>
 
         <!-- Responsive Settings Options -->
