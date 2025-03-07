@@ -16,10 +16,10 @@
                     {{ __('Dashboard') }}
                     </x-nav-link>
                     @auth
-                        <x-nav-link :href="route('master-barang')" :active="request()->routeIs('master-barang')">
+                        <x-nav-link :href="route('master-barang.index')" :active="request()->routeIs('master-barang.index')">
                             {{ __('Master Barang') }}
                         </x-nav-link>
-                        <x-nav-link :href="route('pencatatan')" :active="request()->routeIs('pencatatan')">
+                        <x-nav-link :href="route('pencatatan.index')" :active="request()->routeIs('pencatatan.index')">
                             {{ __('Pencatatan') }}
                         </x-nav-link>
                     @endauth
@@ -80,10 +80,10 @@
                 {{ __('Dashboard') }}
             </x-responsive-nav-link>
             @auth
-                <x-responsive-nav-link :href="route('master-barang')" :active="request()->routeIs('master-barang')">
+                <x-responsive-nav-link :href="route('master-barang.index')" :active="request()->routeIs('master-barang.index')">
                     {{ __('Master Barang') }}
                 </x-responsive-nav-link>
-                <x-responsive-nav-link :href="route('pencatatan')" :active="request()->routeIs('pencatatan')">
+                <x-responsive-nav-link :href="route('pencatatan.index')" :active="request()->routeIs('pencatatan.index')">
                     {{ __('Pencatatan') }}
                 </x-responsive-nav-link>
             @endauth

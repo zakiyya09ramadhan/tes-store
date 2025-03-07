@@ -34,10 +34,10 @@ Route::middleware('auth')->group(function () {
     Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
     Route::get('/admin', [DashboardController::class, 'admin'])->middleware('role:admin');
 
-    Route::get('/master-barang', [MasterBarangController::class, 'index'])->name('master-barang');
-    Route::get('/master-barang', [MasterBarangController::class, 'store'])->name('master-barang');
+    Route::get('/master-barang', [MasterBarangController::class, 'index'])->name('master-barang.index');
+    Route::post('/master-barang', [MasterBarangController::class, 'store'])->name('master-barang.store');
 
-    Route::get('/pencatatan', [PencatatanController::class, 'index'])->name('pencatatan');
+    Route::get('/pencatatan', [PencatatanController::class, 'index'])->name('pencatatan.index');
 });
 
 require __DIR__.'/auth.php';

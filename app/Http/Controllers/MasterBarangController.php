@@ -25,6 +25,6 @@ class MasterBarangController extends Controller
 
         Barang::create($request->all());
 
-        return redirect()->route('master-barang')->with('success', 'Barang berhasil ditambahkan.');
+        return redirect()->route('master-barang.index')->with('success', 'Barang berhasil ditambahkan.');
     }
 }
